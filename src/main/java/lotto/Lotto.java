@@ -24,6 +24,13 @@ public class Lotto {
         this.sort();
     }
 
+    public Lotto(List<Integer> lottoList) {
+        for (Integer lottoNumber : lottoList) {
+            this.lottoNumbers.add(new LottoNumber(lottoNumber));
+        }
+        this.sort();
+    }
+
     private void sort() {
         Collections.sort(this.lottoNumbers);
     }
