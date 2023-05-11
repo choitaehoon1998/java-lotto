@@ -13,8 +13,7 @@ public class WinningLotto {
         }
     }
 
-    public Long match(Lotto lotto) {
-        int matchCount = Math.toIntExact(lotto.getLottoNumbers().stream().filter(winningLottoNumbers::contains).count());
-        return WinningPrice.getWiningPrice(matchCount);
+    public int match(Lotto lotto) {
+        return Math.toIntExact(lotto.getLottoNumbers().stream().filter(winningLottoNumbers::contains).count());
     }
 }

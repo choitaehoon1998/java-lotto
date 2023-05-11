@@ -22,7 +22,7 @@ public enum WinningPrice {
         return Arrays.stream(values())
                 .filter(winningPrice -> winningPrice.matchCount == matchCount)
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException(""));
+                .orElseThrow(() -> new IllegalArgumentException("당첨 개수에 해당하는 상금이 없습니다."));
     }
 
     public static Long getWiningPrice(int matchCount) {
