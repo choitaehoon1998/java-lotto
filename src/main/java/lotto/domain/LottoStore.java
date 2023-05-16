@@ -1,4 +1,4 @@
-package lotto;
+package lotto.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,10 @@ public class LottoStore {
 
     public LottoStore(MoneyChanger moneyChanger) {
         this.moneyChanger = moneyChanger;
+    }
+
+    public LottoStore(){
+        this.moneyChanger = money -> money / 1000;
     }
 
     public List<Lotto> buy(int money) {
